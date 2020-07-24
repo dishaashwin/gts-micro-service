@@ -23,40 +23,40 @@ public class GtsUserProjects
 	@Column(name = "GTS_USER_WORK_EXPERIENCE_ID")
 	private Long gtsUserWorkExperienceId;
 	@JsonProperty("gts_user_employment_type")
-	@Column(name = "GTS_USER_EMPLOYMENT_TYPE")
+	@Column(name = "GTS_USER_EMPLOYMENT_TYPE",nullable = false)
     private String gtsUserEmploymentType;
 	@JsonProperty("gts_user_project_skill_ids")
-	@Column(name = "GTS_USER_PROJECT_SKILL_IDS")
+	@Column(name = "GTS_USER_PROJECT_SKILL_IDS",nullable = false)
     private String gtsUserProjectSkillIds;
 	@JsonProperty("gts_user_role_description")
-	@Column(name = "GTS_USER_ROLE_DESCRIPTIOM")
+	@Column(name = "GTS_USER_ROLE_DESCRIPTION",nullable = false)
     private String gtsUserRoleDescription;
 	@JsonProperty("gts_user_role")
-	@Column(name = "GTS_USER_ROLE")
+	@Column(name = "GTS_USER_ROLE",nullable = false)
     private String gtsUserRole;
 	@JsonProperty("gts_user_project_start_date")
-	@Column(name = "GTS_USER_PROJECT_START_DATE")
+	@Column(name = "GTS_USER_PROJECT_START_DATE",nullable = false)
     private String gtsUserProjectStartDate;
 	@JsonProperty("gts_user_project_end_date")
-	@Column(name = "GTS_USER_PROJECT_END_DATE")
+	@Column(name = "GTS_USER_PROJECT_END_DATE",nullable = false)
     private String gtsUserProjectEndDate;
 	@JsonProperty("gts_user_project_site")
-	@Column(name = "GTS_USER_PROJECT_SITE")
+	@Column(name = "GTS_USER_PROJECT_SITE",nullable = false)
     private String gtsUserProjectSite;
 	@JsonProperty("gts_user_client")
-	@Column(name = "GTS_USER_CLIENT")
+	@Column(name = "GTS_USER_CLIENT",nullable = false)
     private String gtsUserClient;
 	@JsonProperty("gts_user_project_description")
-	@Column(name = "GTS_USER_PROJECT_DESCRIPTION")
+	@Column(name = "GTS_USER_PROJECT_DESCRIPTION",nullable = false)
     private String gtsUserProjectDescription;
 	@JsonProperty("gts_user_designation")
-	@Column(name = "GTS_USER_DESIGNATION")
+	@Column(name = "GTS_USER_DESIGNATION",nullable = false)
     private String gtsUserDesignation;
 	@JsonProperty("gts_user_project_location")
-	@Column(name = "GTS_USER_PROJECT_LOCATION")
+	@Column(name = "GTS_USER_PROJECT_LOCATION",nullable = false)
     private String gtsUserProjectLocation;
 	@JsonProperty("gts_user_team_size")
-	@Column(name = "GTS_USER_TEAM_SIZE")
+	@Column(name = "GTS_USER_TEAM_SIZE",nullable = false)
     private Integer gtsUserTeamSize;
     @JsonProperty("gts_user_id")
 	@Column(name = "GTS_USER_ID",nullable = false)
