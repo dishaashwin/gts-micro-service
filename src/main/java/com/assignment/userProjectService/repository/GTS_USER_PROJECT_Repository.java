@@ -1,4 +1,4 @@
-package com.assignment.chaukuriWorkExperience.repository;
+package com.assignment.userProjectService.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -7,8 +7,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.assignment.chaukuriWorkExperience.models.GtsUserProjects;
-
+import com.assignment.userProjectService.models.GtsUserProjects;
 
 import java.sql.Date;
 import java.util.List;

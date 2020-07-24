@@ -1,4 +1,4 @@
-package com.assignment.chaukuriWorkExperience.controller;
+package com.assignment.userProjectService.controller;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -9,12 +9,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;     
-import com.assignment.chaukuriWorkExperience.models.GtsUserProjects;
-import com.assignment.chaukuriWorkExperience.models.UserId;
-import com.assignment.chaukuriWorkExperience.models.WorkExperienceId;
-import com.assignment.chaukuriWorkExperience.models.WorkExperienceResponseBody;
-import com.assignment.chaukuriWorkExperience.repository.GTS_USER_PROJECT_Repository;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.assignment.userProjectService.models.GtsUserProjects;
+import com.assignment.userProjectService.models.UserId;
+import com.assignment.userProjectService.models.WorkExperienceId;
+import com.assignment.userProjectService.models.WorkExperienceResponseBody;
+import com.assignment.userProjectService.repository.GTS_USER_PROJECT_Repository;
 
 @RestController
 public class GtsUserProjectController<T> {

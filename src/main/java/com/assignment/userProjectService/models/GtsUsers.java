@@ -1,4 +1,4 @@
-package com.assignment.chaukuriWorkExperience.models;
+package com.assignment.userProjectService.models;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -1,4 +1,4 @@
-package com.assignment.chaukuriWorkExperience.models;
+package com.assignment.userProjectService.models;
 
 public class WorkExperienceId {
 	Long workExperienceId;

@@ -1,4 +1,4 @@
-package com.assignment.chaukuriWorkExperience.models;
+package com.assignment.userProjectService.models;
 
 import org.springframework.http.HttpStatus;
 
