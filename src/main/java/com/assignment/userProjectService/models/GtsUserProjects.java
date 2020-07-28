@@ -19,9 +19,12 @@ public class GtsUserProjects
 { 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@JsonProperty("gts_user_work_experience_id")
-	@Column(name = "GTS_USER_WORK_EXPERIENCE_ID")
-	private Long gtsUserWorkExperienceId;
+	@JsonProperty("gts_user_project_id")
+	@Column(name = "GTS_USER_PROJECT_ID")
+	private Long gtsUserProjectId;
+	@JsonProperty("gts_user_employer_name")
+	@Column(name = "GTS_USER_EMPLOYER_NAME",nullable=false)
+	private String gtsUserEmployerName;
 	@JsonProperty("gts_user_employment_type")
 	@Column(name = "GTS_USER_EMPLOYMENT_TYPE",nullable = false)
     private String gtsUserEmploymentType;
@@ -74,7 +77,7 @@ public void setGtsUser(GtsUsers gtsUser) {
 	this.gtsUser = gtsUser;
 }
 
-	private String gtsUserEmployerName;
+	
 
     public Long getGtsUserId ()
     {
@@ -206,17 +209,21 @@ public void setGtsUser(GtsUsers gtsUser) {
         this.gtsUserTeamSize = gtsUserTeamSize;
     }
 
-    public Long getGtsUserWorkExperienceId ()
-    {
-        return gtsUserWorkExperienceId;
-    }
+   
 
-    public void setGtsUserWorkExperienceId (Long gtsUserWorkExperienceId)
-    {
-        this.gtsUserWorkExperienceId = gtsUserWorkExperienceId;
-    }
+    public Long getGtsUserProjectId() {
+		return gtsUserProjectId;
+	}
 
-    public String getGtsUserEmployerName ()
+	public void setGtsUserProjectId(Long gtsUserProjectId) {
+		this.gtsUserProjectId = gtsUserProjectId;
+	}
+
+	public void setGtsUserId(long gtsUserId) {
+		this.gtsUserId = gtsUserId;
+	}
+
+	public String getGtsUserEmployerName ()
     {
         return gtsUserEmployerName;
     }
@@ -229,7 +236,7 @@ public void setGtsUser(GtsUsers gtsUser) {
     @Override
     public String toString()
     {
-        return "GtsUserProject [gtsUserId = "+gtsUserId+", gtsUserEmploymentType = "+gtsUserEmploymentType+", gtsUserProjectSkillIds = "+gtsUserProjectSkillIds+", gtsUserRoleDescription = "+gtsUserRoleDescription+", gtsUserRole = "+gtsUserRole+", gtsUserProjectStartDate = "+gtsUserProjectStartDate+", gtsUserProjectEndDate = "+gtsUserProjectEndDate+", gtsUserProjectSite = "+gtsUserProjectSite+", gtsUserClient = "+gtsUserClient+", gtsUserProjectDescription = "+gtsUserProjectDescription+", gtsUserDesignation = "+gtsUserDesignation+", gtsUserProjectLocation = "+gtsUserProjectLocation+", gtsUserTeamSize = "+gtsUserTeamSize+", gtsUserWorkExperienceId = "+gtsUserWorkExperienceId+", gtsUserEmployerName = "+gtsUserEmployerName+"]";
+        return "GtsUserProject [gtsUserId = "+gtsUserId+", gtsUserEmploymentType = "+gtsUserEmploymentType+", gtsUserProjectSkillIds = "+gtsUserProjectSkillIds+", gtsUserRoleDescription = "+gtsUserRoleDescription+", gtsUserRole = "+gtsUserRole+", gtsUserProjectStartDate = "+gtsUserProjectStartDate+", gtsUserProjectEndDate = "+gtsUserProjectEndDate+", gtsUserProjectSite = "+gtsUserProjectSite+", gtsUserClient = "+gtsUserClient+", gtsUserProjectDescription = "+gtsUserProjectDescription+", gtsUserDesignation = "+gtsUserDesignation+", gtsUserProjectLocation = "+gtsUserProjectLocation+", gtsUserTeamSize = "+gtsUserTeamSize+", gtsUserWorkExperienceId = "+gtsUserProjectId+", gtsUserEmployerName = "+gtsUserEmployerName+"]";
     }
 }
 			

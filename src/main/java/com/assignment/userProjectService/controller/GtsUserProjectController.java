@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.assignment.userProjectService.models.GtsUserProjects;
+import com.assignment.userProjectService.models.ProjectId;
 import com.assignment.userProjectService.models.UserId;
-import com.assignment.userProjectService.models.WorkExperienceId;
 import com.assignment.userProjectService.models.WorkExperienceResponseBody;
 import com.assignment.userProjectService.repository.GTS_USER_PROJECT_Repository;
 
@@ -44,14 +44,14 @@ public class GtsUserProjectController<T> {
 		
 
 	}
-	@GetMapping("api/v1/user/project/work_experience_id")
-	public   <T> T getUserProjectsByWorkExperienceId(@RequestBody WorkExperienceId workExperienceId) {
+	@GetMapping("api/v1/user/project/project_id")
+	public   <T> T getUserProjectsByWorkExperienceId(@RequestBody ProjectId projectId) {
 		
 
 		Optional<GtsUserProjects> gtsUserProject= null;
 		try {
 			
-			gtsUserProject = gtsUserProjectRepository.findById(workExperienceId.getWorkExperienceId());
+			gtsUserProject = gtsUserProjectRepository.findById(projectId.getProjectId());
 		if(gtsUserProject.get()==null){
 			return (T) new WorkExperienceResponseBody("No Project for the particular WorkExperienceId","false",404);	
 			
@@ -95,15 +95,15 @@ public class GtsUserProjectController<T> {
 		}
 	}
 
-	@DeleteMapping("api/v1/user/project/work_experience_id")
-	public WorkExperienceResponseBody deleteProjectByWorkExperienceId(@RequestBody WorkExperienceId workExperienceId) {
+	@DeleteMapping("api/v1/user/project/project_id")
+	public WorkExperienceResponseBody deleteProjectByWorkExperienceId(@RequestBody ProjectId projectId) {
 		try {
 			
-			if((gtsUserProjectRepository.findById(workExperienceId.getWorkExperienceId()))==null){
+			if((gtsUserProjectRepository.findById(projectId.getProjectId()))==null){
 
 				return new WorkExperienceResponseBody( "Project doesnot exist for the workExperienceId","false",404);}
 			else{
-				gtsUserProjectRepository.deleteById(workExperienceId.getWorkExperienceId());
+				gtsUserProjectRepository.deleteById(projectId.getProjectId());
 				return new WorkExperienceResponseBody("Deleted the Project","true",200);		
 			}
 		} catch (Exception e) {
